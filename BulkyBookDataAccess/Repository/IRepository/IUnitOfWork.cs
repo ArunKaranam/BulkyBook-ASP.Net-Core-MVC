@@ -8,7 +8,8 @@ namespace BulkyBookDataAccess.Repository.IRepository
 {
     public interface IUnitOfWork:IDisposable
     {
-        ICategoryRepository Category { get; set; }
-        ISP_Call sP_Call { get; }
+        ICategoryRepository Category { get;    }
+        ISP_Call SP_Call{ get; }
+        void Save();
     }
 }
