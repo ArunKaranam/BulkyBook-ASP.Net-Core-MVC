@@ -1,6 +1,6 @@
 ﻿@model BulkyBook.Models.Category
+
 @{
-    
     Layout = "~/Views/Shared/_Layout.cshtml";
     var title = "Create Category";
 }
@@ -9,8 +9,9 @@
 <form method="post">
     <div class="row p-3 border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        @if (Model.Id != 0) {
-            //this is for edit
+        @if (Model.Id != 0)
+        {
+            //edit
             title = "Edit Category";
         }
         <div class="col-12 border-bottom">
@@ -22,7 +23,7 @@
                     <label asp-for="Name"></label>
                 </div>
                 <div class="col-8">
-                   <input asp-for="Name" class="form-control"/>
+                    <input asp-for="Name" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
             </div>
@@ -34,16 +35,14 @@
                     }
                     else
                     {
-                        <partial name="_CreateAndBackToListButton"  />
-
+                        <partial name="_CreateAndBackToListButton" />
                     }
                 </div>
             </div>
         </div>
     </div>
 </form>
-@section Scripts{ 
-<partial name="_ValidationScriptsPartial"/>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
 }
-
-
