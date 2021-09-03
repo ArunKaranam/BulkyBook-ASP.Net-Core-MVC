@@ -28,6 +28,8 @@ namespace BulkyBook.Areas.Customers.Controllers
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
             return View(productList);
         }
+        
+
 
         public IActionResult Privacy()
         {
