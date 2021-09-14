@@ -1,4 +1,3 @@
-
 using BulkyBook.DataAccess.Data;
 using BulkyBook.utility;
 using BulkyBookDataAccess.Initializer;
@@ -60,11 +59,11 @@ namespace BulkyBook
                 options.ClientSecret = "NaQS47Fea1TXT2kR37zFgsMH";
 
             });
-                }
+        }
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IDbInitializer dbInitializer)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
